@@ -14,11 +14,12 @@ const PostDetails = () => {
       <Link className="link" to={"/"}>
         <h1>Users /</h1>
       </Link>
-      {user.map((elem) => (
-        <h1 className="title" key={elem.id}>
-          {elem.title}
-        </h1>
-      ))}
+      {Array.isArray(user) &&
+        user.map((elem) => (
+          <h3 className="title" key={elem.id}>
+            {elem.title}
+          </h3>
+        ))}
     </div>
   );
 };
